@@ -8,7 +8,7 @@ const cltusers = "users";
 var xss = require("xss");
 
 const cors = require('cors');
-var orgns = ["http://localhost:5000", "http://localhost:3000", "http://192.168.247.239:3000"]
+var orgns = "*";
 mobile.use(cors({
     origin: orgns
 }));
