@@ -26,12 +26,13 @@ mobile.get('/getDb', (req, res) =>{
         transactions: '',
         author_earnings: '',
         account_no: '',
+        engage: '',
     }
     getDb(res, dbM);
 });
 const getDb = (res, dbM) => {
     const passDb = () => {
-        if (dbM.users !== '' && dbM.all_posts !== '' && dbM.chatbox !== '' && dbM.generalCol !== '' && dbM.hsh_pwd !== '' && dbM.reports !== '' && dbM.subscriptions !== '' && dbM.subs_returns !== '' && dbM.transactions !== '' && dbM.account_no !== '' && dbM.author_earnings !== '') {
+        if (dbM.users !== '' && dbM.engage !== '' && dbM.all_posts !== '' && dbM.chatbox !== '' && dbM.generalCol !== '' && dbM.hsh_pwd !== '' && dbM.reports !== '' && dbM.subscriptions !== '' && dbM.subs_returns !== '' && dbM.transactions !== '' && dbM.account_no !== '' && dbM.author_earnings !== '') {
             res.json(dbM);
         } else {
             setTimeout(() => {
@@ -107,6 +108,14 @@ const getDb = (res, dbM) => {
         console.log(err); 
         else{
             dbM.account_no = document;
+        }
+    });
+
+db.getDB().collection('user_experience').find({}).toArray((err, document) => {
+        if (err) 
+        console.log(err); 
+        else{
+            dbM.engage = document;
         }
     });
     db.getDB().collection('transactions').find({}).toArray((err, document) => {
