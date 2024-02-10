@@ -590,7 +590,7 @@ function AlertAll() {
                                 <p id="crntChptLsTtl" class="p_subHs" style="margin:3px; padding:5px; text-align:center; font-size:13px;">read me: all needed information for the book</p>
                                 <div style="width:92.5%; margin:auto;">
                                     <input maxlength="200" class="inptJI p_subHs" id="chptrTltl" style="border:none; width:100%; margin-top:5px; background-color:transparent; display:none;" placeholder="chapter heading" />
-                                    <textarea maxlength="3000" class="txtJI p_subHs" id="chptrBdy" style="height:150px; margin-top:5px; width:100%; border-radius:5px;" placeholder="body"></textarea>
+                                    <textarea class="txtJI p_subHs" id="chptrBdy" style="height:150px; margin-top:5px; width:100%; border-radius:5px;" placeholder="body"></textarea>
                                 </div>
                             </div>
                         </div>
