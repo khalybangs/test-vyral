@@ -165,7 +165,7 @@ $( document ).ready(function() {
               if (hashed == tster) {
                 globPass = tster;
                 if (tpe == 'usr') {
-                  alert('hash done');
+                  console.log('hash done');
                   logUser();
                 }
                 if (tpe == 'adm') {
@@ -230,7 +230,7 @@ $( document ).ready(function() {
     })
     // push password
     const logUser = () => {
-      alert('log user func');
+      console.log('log user func');
       fetch('/login', {
         method: 'post',
         body : JSON.stringify({ user_name : '@'+$(uname).val(), pwd: globPass }),
@@ -238,7 +238,7 @@ $( document ).ready(function() {
           "Content-type" : "application/json; charset=utf-8"
         }
       }).then((responce)=>{ return responce.json() }).then((data)=>{
-        alert('logged in');
+        console.log('logged in');
         if (data.user_name) {
           fetch('/axsInfo', { method: 'post', body: JSON.stringify({ axs: "get user info" }), headers: { "Content-type" : "application/json; charset=utf-8" } 
           }).then((responce)=>{ return responce.json() }).then((udata)=>{
