@@ -84,7 +84,7 @@ function land() {
     // ACTIONS
     // to login https://test-vyral-production.up.railway.app/
     $('.to_login').click(()=>{
-        window.open('https://test-vyral-production.up.railway.app/Login', '_blank');
+        window.open('https://test-vyral.onrender.com/Login', '_blank');
     });
     // to home
     $('.to_home').click(()=>{
