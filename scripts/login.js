@@ -294,7 +294,7 @@ $( document ).ready(function() {
         $('#alertLogpwd').css('display', 'none');
         var user = 'adm'; var tpe = 'adm';
         unHash(user, $('#AdmnLgPwdIn').val(), tpe);
-        /*fetch('/adminlogs/genPwd', { method: 'get' }).then((res)=>{
+        fetch('/adminlogs/genPwd', { method: 'get' }).then((res)=>{
           return res.json();
         }).then((data)=>{
           if ($('#AdmnLgPwdIn').val() == data) {
@@ -321,7 +321,7 @@ $( document ).ready(function() {
               };
             });
           }
-        });*/
+        });
       }else {
           $('#alertLogpwd').text(`Provide password`);
           AlertsLogs();
